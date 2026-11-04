@@ -6,12 +6,15 @@ class Roster {
 	private:
 		int lastIndex = -1;
 		const static int numStudents = 5;
-		
-		
+
+
 
 	public:
 
-		Student* classRosterArray[numStudents];
+		Roster() = default;
+        Roster(const Roster&) = delete;
+        Roster& operator=(const Roster&) = delete;
+        Student* classRosterArray[numStudents]{};
 
 		void parse(string row);
 
